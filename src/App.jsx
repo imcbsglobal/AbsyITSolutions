@@ -5,22 +5,25 @@ import Home from "./components/Home"
 import Services from "./components/Services"
 import Softwares from "./components/Softwares"
 import Navbar from "./components/Navbar"
+import Licensing from "./components/licensing"
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom"
 
 function App() {
 
   return (
-    <Router>
-       <Navbar/>
-       <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/about" element={<About/>}/>
-        <Route path="/softwares" element={<Softwares/>}/>
-        <Route path="/services" element={<Services/>}/>
-        <Route path="/clients" element={<Clients/>}/>
-        <Route path="/contact" element={<Contact/>}/>
-       </Routes>
-    </Router>
+    <Licensing>
+      <Router>
+        <Navbar/>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/about" element={<About/>}/>
+          <Route path="/softwares" element={<Softwares/>}/>
+          <Route path="/services" element={<Services/>}/>
+          <Route path="/clients" element={<Clients/>}/>
+          <Route path="/contact" element={<Contact/>}/>
+        </Routes>
+      </Router>
+    </Licensing>
   )
 }
 
